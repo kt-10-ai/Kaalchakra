@@ -1,0 +1,326 @@
+{
+ "nature/campfire_stones.glb": {
+  "h": 0.078,
+  "w": 0.541
+ },
+ "nature/cliff_blockDiagonal_rock.glb": {
+  "h": 1,
+  "w": 1
+ },
+ "nature/cliff_blockSlope_rock.glb": {
+  "h": 1,
+  "w": 1.2
+ },
+ "nature/cliff_blockSlope_stone.glb": {
+  "h": 1,
+  "w": 1.2
+ },
+ "nature/fence_simple.glb": {
+  "h": 0.345,
+  "w": 1
+ },
+ "nature/fence_simpleCenter.glb": {
+  "h": 0.345,
+  "w": 1
+ },
+ "nature/fence_simpleDiagonal.glb": {
+  "h": 0.345,
+  "w": 1
+ },
+ "nature/fence_simpleDiagonalCenter.glb": {
+  "h": 0.345,
+  "w": 1
+ },
+ "nature/fence_simpleHigh.glb": {
+  "h": 0.345,
+  "w": 1.041
+ },
+ "nature/fence_simpleLow.glb": {
+  "h": 0.195,
+  "w": 1.041
+ },
+ "nature/grass.glb": {
+  "h": 0.254,
+  "w": 0.392
+ },
+ "nature/grass_leafs.glb": {
+  "h": 0.143,
+  "w": 0.257
+ },
+ "nature/grass_leafsLarge.glb": {
+  "h": 0.143,
+  "w": 0.487
+ },
+ "nature/ground_riverBend.glb": {
+  "h": 0.05,
+  "w": 1
+ },
+ "nature/ground_riverBendBank.glb": {
+  "h": 0.05,
+  "w": 1
+ },
+ "nature/ground_riverCorner.glb": {
+  "h": 0.05,
+  "w": 1
+ },
+ "nature/ground_riverCornerSmall.glb": {
+  "h": 0.05,
+  "w": 1
+ },
+ "nature/ground_riverCross.glb": {
+  "h": 0.05,
+  "w": 1
+ },
+ "nature/ground_riverEnd.glb": {
+  "h": 0.05,
+  "w": 1
+ },
+ "nature/ground_riverEndClosed.glb": {
+  "h": 0.05,
+  "w": 1
+ },
+ "nature/ground_riverOpen.glb": {
+  "h": 0,
+  "w": 1
+ },
+ "nature/ground_riverRocks.glb": {
+  "h": 0.05,
+  "w": 1
+ },
+ "nature/ground_riverSide.glb": {
+  "h": 0.05,
+  "w": 1
+ },
+ "nature/ground_riverSideOpen.glb": {
+  "h": 0.05,
+  "w": 1
+ },
+ "nature/ground_riverSplit.glb": {
+  "h": 0.05,
+  "w": 1
+ },
+ "nature/ground_riverStraight.glb": {
+  "h": 0.05,
+  "w": 1
+ },
+ "nature/ground_riverTile.glb": {
+  "h": 0.05,
+  "w": 1
+ },
+ "nature/log_large.glb": {
+  "h": 0.417,
+  "w": 1
+ },
+ "nature/mushroom_redTall.glb": {
+  "h": 0.25,
+  "w": 0.143
+ },
+ "nature/path_stone.glb": {
+  "h": 0.05,
+  "w": 1
+ },
+ "nature/path_stoneCircle.glb": {
+  "h": 0.05,
+  "w": 0.932
+ },
+ "nature/path_stoneCorner.glb": {
+  "h": 0.05,
+  "w": 0.778
+ },
+ "nature/path_stoneEnd.glb": {
+  "h": 0.05,
+  "w": 0.618
+ },
+ "nature/plant_bush.glb": {
+  "h": 0.244,
+  "w": 0.396
+ },
+ "nature/plant_bushDetailed.glb": {
+  "h": 0.36,
+  "w": 0.603
+ },
+ "nature/plant_bushLarge.glb": {
+  "h": 0.243,
+  "w": 0.374
+ },
+ "nature/plant_bushLargeTriangle.glb": {
+  "h": 0.169,
+  "w": 0.471
+ },
+ "nature/plant_bushSmall.glb": {
+  "h": 0.207,
+  "w": 0.383
+ },
+ "nature/plant_bushTriangle.glb": {
+  "h": 0.296,
+  "w": 0.414
+ },
+ "nature/rock_smallH.glb": {
+  "h": 0.407,
+  "w": 0.462
+ },
+ "nature/rock_smallI.glb": {
+  "h": 0.278,
+  "w": 0.414
+ },
+ "nature/tree_cone.glb": {
+  "h": 1.43,
+  "w": 0.53
+ },
+ "nature/tree_cone_dark.glb": {
+  "h": 1.43,
+  "w": 0.53
+ },
+ "nature/tree_cone_fall.glb": {
+  "h": 1.43,
+  "w": 0.53
+ },
+ "nature/tree_default.glb": {
+  "h": 1.708,
+  "w": 0.755
+ },
+ "nature/tree_default_dark.glb": {
+  "h": 1.708,
+  "w": 0.755
+ },
+ "nature/tree_default_fall.glb": {
+  "h": 1.708,
+  "w": 0.755
+ },
+ "nature/tree_oak.glb": {
+  "h": 1.226,
+  "w": 0.74
+ },
+ "nature/tree_oak_dark.glb": {
+  "h": 1.226,
+  "w": 0.74
+ },
+ "nature/tree_oak_fall.glb": {
+  "h": 1.226,
+  "w": 0.74
+ },
+ "nature/tree_palmDetailedShort.glb": {
+  "h": 0.948,
+  "w": 1.034
+ },
+ "nature/tree_pineDefaultA.glb": {
+  "h": 1.546,
+  "w": 0.532
+ },
+ "nature/tree_pineRoundA.glb": {
+  "h": 1.366,
+  "w": 0.712
+ },
+ "nature/tree_tall.glb": {
+  "h": 1.688,
+  "w": 0.461
+ },
+ "nature/tree_tall_dark.glb": {
+  "h": 1.688,
+  "w": 0.461
+ },
+ "nature/tree_tall_fall.glb": {
+  "h": 1.688,
+  "w": 0.461
+ },
+ "nature/tree_thin.glb": {
+  "h": 1.49,
+  "w": 0.68
+ },
+ "nature/tree_thin_dark.glb": {
+  "h": 1.49,
+  "w": 0.68
+ },
+ "nature/tree_thin_fall.glb": {
+  "h": 1.49,
+  "w": 0.68
+ },
+ "castle/tower-slant-roof.glb": {
+  "h": 2.14,
+  "w": 1.17
+ },
+ "castle/tower-square-base-color.glb": {
+  "h": 1.01,
+  "w": 1
+ },
+ "castle/tower-square-mid-color.glb": {
+  "h": 0.202,
+  "w": 0.93
+ },
+ "castle/tower-square-mid-door.glb": {
+  "h": 1.01,
+  "w": 0.93
+ },
+ "castle/tower-square-mid-open.glb": {
+  "h": 1.01,
+  "w": 0.93
+ },
+ "castle/tower-square-mid-windows.glb": {
+  "h": 1.01,
+  "w": 0.93
+ },
+ "castle/tower-square-mid.glb": {
+  "h": 1.01,
+  "w": 0.93
+ },
+ "castle/wall.glb": {
+  "h": 1.31,
+  "w": 1
+ },
+ "town/pillar-stone.glb": {
+  "h": 1,
+  "w": 0.16
+ },
+ "town/roof-corner.glb": {
+  "h": 0.648,
+  "w": 1.067
+ },
+ "town/roof-gable-detail.glb": {
+  "h": 0.677,
+  "w": 1.212
+ },
+ "town/roof-gable-top.glb": {
+  "h": 0.376,
+  "w": 1
+ },
+ "town/roof-gable.glb": {
+  "h": 0.571,
+  "w": 1.1
+ },
+ "town/roof-high-point.glb": {
+  "h": 1,
+  "w": 1.1
+ },
+ "town/wall-arch-top.glb": {
+  "h": 1,
+  "w": 1
+ },
+ "town/wall-doorway-round.glb": {
+  "h": 1,
+  "w": 1
+ },
+ "town/wall-doorway-square-wide-curved.glb": {
+  "h": 1,
+  "w": 1
+ },
+ "town/wall-doorway-square.glb": {
+  "h": 1,
+  "w": 1
+ },
+ "town/wall-side.glb": {
+  "h": 1,
+  "w": 0.26
+ },
+ "town/wall-window-glass.glb": {
+  "h": 1,
+  "w": 1
+ },
+ "town/wall-window-shutters.glb": {
+  "h": 1,
+  "w": 1
+ },
+ "town/wall-wood-block-half.glb": {
+  "h": 0.5,
+  "w": 1
+ }
+}
