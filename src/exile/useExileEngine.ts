@@ -16,8 +16,18 @@ function advance(fromIndex: number, x: number, flags: ExileFlags) {
   let ambient: Ambient | null = null;
   let modal: ExileStep | null = null;
 
+  if (flags.ending) {
+    const end = EXILE_STORY.findIndex((s) => s.kind === "end" && s.ending === flags.ending);
+    return { idx: EXILE_STORY.length - 1, ambient, modal: EXILE_STORY[end] ?? null };
+  }
+
   while (idx + 1 < EXILE_STORY.length) {
     const step = EXILE_STORY[idx + 1];
+    // early endings sit in the list but are only reachable by flag
+    if (step.kind === "end" && step.ending) {
+      idx++;
+      continue;
+    }
     if ((step.kind === "choice" || step.kind === "walk") && step.condition && !step.condition(flags)) {
       idx++;
       continue;
@@ -37,14 +47,19 @@ function advance(fromIndex: number, x: number, flags: ExileFlags) {
   return { idx, ambient, modal };
 }
 
-export function useExileEngine() {
-  const [flags, setFlags] = useState<ExileFlags>(INITIAL_EXILE_FLAGS);
+/**
+ * `initial` carries what the player brought out of the court; `skipOpening`
+ * drops the hall cutscene when the court game has already played it.
+ */
+export function useExileEngine(initial: ExileFlags = INITIAL_EXILE_FLAGS, skipOpening = false) {
+  const first = skipOpening ? 0 : -1;
+  const [flags, setFlags] = useState<ExileFlags>(initial);
   const [activeModal, setActiveModal] = useState<ExileStep | null>(null);
   const [ambient, setAmbient] = useState<Ambient | null>(null);
   const [runId, setRunId] = useState(0);
   const [progress, setProgress] = useState(0);
   const lastX = useRef(START_X);
-  const resolvedIndexRef = useRef(-1);
+  const resolvedIndexRef = useRef(first);
 
   const setResolved = (idx: number) => {
     resolvedIndexRef.current = idx;
@@ -89,13 +104,14 @@ export function useExileEngine() {
   );
 
   const restart = useCallback(() => {
-    setFlags(INITIAL_EXILE_FLAGS);
+    setFlags(initial);
     setActiveModal(null);
     setAmbient(null);
     lastX.current = START_X;
-    resolvedIndexRef.current = -1;
+    resolvedIndexRef.current = first;
     setProgress(0);
     setRunId((r) => r + 1);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return { flags, activeModal, ambient, locked, onMove, begin, resolveModal, restart, runId, progress };

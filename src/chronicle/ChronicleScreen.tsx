@@ -6,7 +6,7 @@ interface Props {
   onExit: () => void;
 }
 
-const GROUPS: ChronicleEntry["group"][] = ["court", "road", "truth"];
+const GROUPS: ChronicleEntry["group"][] = ["court", "road", "meghadurg", "truth"];
 
 export default function ChronicleScreen({ onExit }: Props) {
   const unlocked = useMemo(() => getUnlocked(), []);

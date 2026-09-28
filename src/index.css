@@ -14,3 +14,27 @@ body {
   background: #0f1115;
   color: #e8e4d8;
 }
+
+/* ── cinematic presentation ─────────────────────────────── */
+@keyframes kc-bar-top { from { transform: translateY(-100%); } to { transform: translateY(0); } }
+@keyframes kc-bar-bottom { from { transform: translateY(100%); } to { transform: translateY(0); } }
+@keyframes kc-rise { from { opacity: 0; transform: translateY(14px); filter: blur(4px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes kc-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes kc-chapter {
+  0% { opacity: 0; letter-spacing: 0.02em; filter: blur(6px); }
+  15% { opacity: 1; filter: none; }
+  75% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.kc-bar-top { animation: kc-bar-top 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.kc-bar-bottom { animation: kc-bar-bottom 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.kc-rise { animation: kc-rise 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.kc-rise-late { animation: kc-rise 0.9s 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.kc-fade { animation: kc-fade 1.2s ease both; }
+.kc-chapter { animation: kc-chapter 5s ease both; }
+.kc-stagger > * { animation: kc-rise 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
+.kc-stagger > *:nth-child(1) { animation-delay: 0.35s; }
+.kc-stagger > *:nth-child(2) { animation-delay: 0.5s; }
+.kc-stagger > *:nth-child(3) { animation-delay: 0.65s; }
+.kc-stagger > *:nth-child(4) { animation-delay: 0.8s; }

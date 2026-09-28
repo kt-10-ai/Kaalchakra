@@ -1,14 +1,19 @@
 import { useEffect, useState } from "react";
 import { getUnlocked } from "../chronicle/storage";
 import { CHRONICLE_ENTRIES, TOTAL_ENTRIES } from "../chronicle/entries";
+import { loadSave } from "../court/engine";
+import { EPISODES } from "../court/episodes";
 
 interface Props {
-  onStart: () => void;
+  onCourt: () => void;
+  onContinue: () => void;
+  onRoad: () => void;
   onChronicle: () => void;
 }
 
-export default function Landing({ onStart, onChronicle }: Props) {
+export default function Landing({ onCourt, onContinue, onRoad, onChronicle }: Props) {
   const [count, setCount] = useState(0);
+  const [saved] = useState(() => loadSave());
 
   useEffect(() => {
     const unlocked = getUnlocked();
@@ -40,7 +45,7 @@ export default function Landing({ onStart, onChronicle }: Props) {
       <p className="mb-2 text-xs text-stone-500">
         <span className="text-sm text-stone-400">निर्वासितकुमारः</span>
         <span className="tracking-[0.25em] text-stone-600 uppercase">
-          {"  ·  The Exile's Crown · Act One"}
+          {"  ·  The Exile's Crown"}
         </span>
       </p>
 
@@ -65,12 +70,30 @@ export default function Landing({ onStart, onChronicle }: Props) {
         of mercy his father called weakness turns out to be the only reason the truth survived.
       </p>
 
-      <button
-        onClick={onStart}
-        className="mb-5 rounded-full bg-amber-500 px-10 py-3.5 font-semibold text-stone-900 transition hover:bg-amber-400"
-      >
-        निर्वासन आरम्भ &middot; Begin the Exile
-      </button>
+      <div className="mb-5 flex flex-col items-center gap-3">
+        {saved && saved.episode > 0 && saved.episode < EPISODES.length && (
+          <button
+            onClick={onContinue}
+            className="rounded-full bg-amber-500 px-10 py-3.5 font-semibold text-stone-900 transition hover:bg-amber-400"
+          >
+            जारी रखें &middot; Continue — Episode {EPISODES[saved.episode]?.n ?? saved.episode + 1} of {EPISODES.length}
+          </button>
+        )}
+        <button
+          onClick={onCourt}
+          className={
+            saved && saved.episode > 0
+              ? "rounded-full border border-amber-600 px-8 py-2.5 text-sm font-semibold text-amber-200 transition hover:bg-amber-950/40"
+              : "rounded-full bg-amber-500 px-10 py-3.5 font-semibold text-stone-900 transition hover:bg-amber-400"
+          }
+        >
+          वज्रगढ़ का दरबार &middot; {saved && saved.episode > 0 ? "Begin the Court Again" : "Begin — The Court of Vajragarh"}
+        </button>
+        <p className="text-xs text-stone-600">Part One · one day · {EPISODES.length} episodes</p>
+        <button onClick={onRoad} className="text-xs text-stone-500 underline-offset-4 hover:text-amber-200 hover:underline">
+          or skip ahead to the road west (Acts One &amp; Two)
+        </button>
+      </div>
 
       <button
         onClick={onChronicle}

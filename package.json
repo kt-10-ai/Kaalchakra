@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:unity-core": "esbuild src/court/core.ts --bundle --format=iife --target=es2019 --outfile=\"My project/Assets/StreamingAssets/court-core.js\""
   },
   "dependencies": {
     "@react-three/drei": "^10.7.8",
@@ -25,6 +26,7 @@
     "@types/react-dom": "^19.2.7",
     "@vitejs/plugin-react": "^6.1.1",
     "autoprefixer": "^10.6.1",
+    "esbuild": "^0.28.2",
     "oxlint": "^1.81.0",
     "postcss": "^8.5.28",
     "tailwindcss": "^4.3.3",
